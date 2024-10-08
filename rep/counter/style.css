@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+}
+
+#btnContainer{
+    text-align: center;
+}
+
+.button{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: cadetblue;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.button:hover{
+    background-color: rgb(68, 128, 130);
+}
