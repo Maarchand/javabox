@@ -35,6 +35,7 @@ interactBtn.onclick = function(){
 
             running = true;
             numInput.disabled = false;
+            numInput.style = "border: 10px solid cadetblue;";
             attempts = 0;
             interactBtn.innerHTML = "GUESS";
             infoP.innerHTML = "Attempts: 0";
@@ -66,6 +67,7 @@ interactBtn.onclick = function(){
             infoP.innerHTML = `CORRECT! The answer was ${answer}. It took you ${attempts} tries.`;
             numInput.value = "";
             numInput.disabled = true;
+            numInput.style = "border: 10px solid grey;";
             promptP.innerHTML = "🥳🥳";
 
             interactBtn.innerHTML = "RESET";
