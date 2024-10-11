@@ -6,7 +6,7 @@ const numInput = document.getElementById("numInput");
 
 
 const minNum = 1;
-const maxNum = 99;
+const maxNum = 100;
 const topBar = document.getElementById("topBar");
 
 topBar.innerHTML = `Raad het nummer tussen ${minNum} en ${maxNum}`;
