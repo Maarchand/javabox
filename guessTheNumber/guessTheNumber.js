@@ -9,7 +9,7 @@ const minNum = 1;
 const maxNum = 99;
 const topBar = document.getElementById("topBar");
 
-topBar.innerHTML = `Try to guess the number between ${minNum} and ${maxNum}`;
+topBar.innerHTML = `Raad het nummer tussen ${minNum} en ${maxNum}`;
 
 numInput.disabled = true;
 
@@ -23,8 +23,8 @@ interactBtn.onclick = function(){
     if(!running){
         if(boundToRestart){
             numInput.disabled = true;
-            interactBtn.innerHTML = "PLAY";
-            infoP.innerHTML = "Attempts: 0";
+            interactBtn.innerHTML = "START";
+            infoP.innerHTML = "Pogignen: 0";
             promptP.innerHTML = "";
             numInput.value = "";
             boundToRestart = false;
@@ -37,8 +37,8 @@ interactBtn.onclick = function(){
             numInput.disabled = false;
             numInput.style = "border: 10px solid cadetblue;";
             attempts = 0;
-            interactBtn.innerHTML = "GUESS";
-            infoP.innerHTML = "Attempts: 0";
+            interactBtn.innerHTML = "RAAD";
+            infoP.innerHTML = "Pogingen: 0";
             numInput.value = "";
 
             answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
@@ -47,30 +47,30 @@ interactBtn.onclick = function(){
     }
     else{
         if(isNaN(numInput.value) || Number(numInput.value) < minNum || Number(numInput.value) > maxNum){
-            promptP.innerHTML = `'${numInput.value}' is not a valid number, try again.`;
+            promptP.innerHTML = `'${numInput.value}' is geen deftig nummer a broer`;
             numInput.value = "";
         }
         else{
             attempts++;
-            infoP.innerHTML = `Attempts: ${attempts}`
+            infoP.innerHTML = `Pogingen: ${attempts}`
         
         if( Number(numInput.value) < answer){
-            promptP.innerHTML = "TOO LOW";
+            promptP.innerHTML = "TE LAAG";
             numInput.value = "";
         }
         else if(Number(numInput.value) > answer){
-            promptP.innerHTML = "TOO HIGH";
+            promptP.innerHTML = "TE HOOG";
             numInput.value = "";
         }
         else{ // GAME OVER
             boundToRestart = true;
-            infoP.innerHTML = `CORRECT! The answer was ${answer}. It took you ${attempts} tries.`;
+            infoP.innerHTML = `juist bro het antwoord was ${answer}. ge moest ${attempts} keer proberen.`;
             numInput.value = "";
             numInput.disabled = true;
             numInput.style = "border: 10px solid grey;";
             promptP.innerHTML = "🥳🥳";
 
-            interactBtn.innerHTML = "RESET";
+            interactBtn.innerHTML = "HERTSTART";
             attempts = 0;
 
             running = false;
