@@ -24,7 +24,7 @@ interactBtn.onclick = function(){
         if(boundToRestart){
             numInput.disabled = true;
             interactBtn.innerHTML = "START";
-            infoP.innerHTML = "Pogignen: 0";
+            infoP.innerHTML = "Pogingen: 0";
             promptP.innerHTML = "";
             numInput.value = "";
             boundToRestart = false;
